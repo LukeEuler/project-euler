@@ -4,27 +4,7 @@
 # https://projecteuler.net/problem=3
 
 from app import Problem
-
-
-class Prime:
-    """generate primes."""
-
-    def __init__(self):
-        self.primes = [2]
-
-    def __iter__(self):
-        return self
-
-    def next(self):
-        nextNum = self.primes[-1] + self.primes[-1] % 2 + 1
-        while True:
-            for prime in self.primes:
-                if nextNum % prime == 0:
-                    break
-            else:
-                self.primes.append(nextNum)
-                return self.primes[-2]
-            nextNum += 2
+from utils import Prime
 
 
 class Problem3(Problem):

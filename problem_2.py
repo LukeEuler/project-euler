@@ -4,22 +4,7 @@
 # https://projecteuler.net/problem=2
 
 from app import Problem
-
-
-class Fibonacci:
-    """generate fibnacci numbers."""
-
-    def __init__(self):
-        """Fibonacci begins with 1, 1."""
-        self.a = 0
-        self.b = 1
-
-    def next(self):
-        self.a, self.b = self.b, self.a + self.b
-        return self.a
-
-    def __iter__(self):
-        return self
+from utils import Fibonacci
 
 
 class Problem2(Problem):

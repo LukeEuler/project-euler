@@ -4,15 +4,7 @@
 # https://projecteuler.net/problem=4
 
 from app import Problem
-
-
-def isPalindrome(num):
-    strNum = str(num)
-    k = int(len(strNum) / 2)
-    for i in xrange(k):
-        if strNum[i] != strNum[- i - 1]:
-            return False
-    return True
+from utils import isPalindrome
 
 
 class Problem4(Problem):
