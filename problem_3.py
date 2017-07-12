@@ -28,7 +28,7 @@ class Prime:
 
 
 class Problem3(Problem):
-    """Even Fibonacci numbers."""
+    """Largest prime factor."""
 
     def __init__(self):
         self.name = "problem 3"
@@ -45,9 +45,6 @@ class Problem3(Problem):
                 break
 
         return factor[-1]
-
-    def run(self):
-        self.baseRun()
 
 
 Problem3().run()

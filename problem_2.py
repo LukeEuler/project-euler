@@ -39,8 +39,5 @@ class Problem2(Problem):
 
         return sum
 
-    def run(self):
-        self.baseRun()
-
 
 Problem2().run()

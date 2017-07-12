@@ -26,8 +26,5 @@ class Problem1(Problem):
 
         return sum
 
-    def run(self):
-        self.baseRun()
-
 
 Problem1().run()
