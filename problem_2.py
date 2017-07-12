@@ -5,9 +5,10 @@
 
 
 class Fibonacci:
-    """generator fibnacci numbers ."""
+    """generate fibnacci numbers."""
 
     def __init__(self):
+        """Fibonacci begins with 1, 1."""
         self.a = 0
         self.b = 1
 
@@ -28,3 +29,8 @@ for num in fibs:
         sum += num
 
 print sum
+
+ah = Fibonacci()
+for value in ah:
+    print value
+    break
