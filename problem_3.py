@@ -3,6 +3,8 @@
 """Largest prime factor."""
 # https://projecteuler.net/problem=3
 
+from app import Problem
+
 
 class Prime:
     """generate primes."""
@@ -25,13 +27,27 @@ class Prime:
             nextNum += 2
 
 
-num = 600851475143
-factor = []
-for prime in Prime():
-    while num % prime == 0:
-        factor.append(prime)
-        num = int(num / prime)
-    if num == 1 or num < prime:
-        break
+class Problem3(Problem):
+    """Even Fibonacci numbers."""
 
-print factor[-1]
+    def __init__(self):
+        self.name = "problem 3"
+        self.num = 600851475143
+
+    def solve(self):
+        # self.num = 600851475143
+        factor = []
+        for prime in Prime():
+            while self.num % prime == 0:
+                factor.append(prime)
+                self.num = int(self.num / prime)
+            if self.num == 1 or self.num < prime:
+                break
+
+        return factor[-1]
+
+    def run(self):
+        self.baseRun()
+
+
+Problem3().run()
