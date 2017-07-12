@@ -11,7 +11,7 @@ def _multilpeOf3or5(num):
 
 
 sum = 0
-for num in range(1, 1000):
+for num in xrange(1, 1000):
     if _multilpeOf3or5(num):
         sum += num
 
