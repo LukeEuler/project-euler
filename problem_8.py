@@ -18,6 +18,7 @@ class Problem8(Problem):
         while line:
             self.numbers.extend([int(x) for x in line.strip('\n')])
             line = f.readline()
+        f.close()
 
     def solve(self):
         result = 0
@@ -25,8 +26,7 @@ class Problem8(Problem):
             product = 1
             for i in range(self.length):
                 product *= self.numbers[index + i]
-            if product > result:
-                result = product
+            result = max(product, result)
         return result
 
 

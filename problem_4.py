@@ -23,8 +23,7 @@ class Problem4(Problem):
                 num = a * b
                 if isPalindrome(num):
                     minNum = b
-                    if num > result:
-                        result = num
+                    result = max(result, num)
                     break
         return result
 
