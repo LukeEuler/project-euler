@@ -59,3 +59,14 @@ def gcd(a, b):
 
 def lcm(a, b):
     return a * b / gcd(a, b)
+
+
+def combinatorialNumber(m, n):
+    if n > m:
+        return 0
+    result = 1
+    for i in xrange(n + 1, m + 1):
+        result *= i
+    for i in xrange(1, m - n + 1):
+        result /= i
+    return result
