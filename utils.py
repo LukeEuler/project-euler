@@ -29,8 +29,12 @@ class Prime:
     def next(self):
         nextNum = self.primes[-1] + self.primes[-1] % 2 + 1
         while True:
+            sup = int(nextNum**.5)
             for prime in self.primes:
-                if nextNum % prime == 0:
+                if prime > sup:
+                    self.primes.append(nextNum)
+                    return self.primes[-2]
+                elif nextNum % prime == 0:
                     break
             else:
                 self.primes.append(nextNum)
