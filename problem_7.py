@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """10001st prime."""
-# https://projecteuler.net/problem=6
+# https://projecteuler.net/problem=7
 
 from app import Problem
 from utils import Prime

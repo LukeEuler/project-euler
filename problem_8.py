@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """Largest product in a series."""
-# https://projecteuler.net/problem=6
+# https://projecteuler.net/problem=8
 
 from app import Problem
 
