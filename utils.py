@@ -61,6 +61,13 @@ def lcm(a, b):
     return a * b / gcd(a, b)
 
 
+def factorial(n):
+    result = 1
+    for value in xrange(2, n + 1):
+        result *= value
+    return result
+
+
 def combinatorialNumber(m, n):
     if n > m:
         return 0
