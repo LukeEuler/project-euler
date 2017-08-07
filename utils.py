@@ -87,3 +87,18 @@ def isLeapYear(year):
     elif year % 4 == 0:
         return True
     return False
+
+
+def getProperDivisors(num):
+    result = [1]
+    pre = []
+    sup = int(num**.5) + 1
+    for item in xrange(2, sup):
+        if num % item == 0:
+            pre.append(item)
+    result.extend(pre)
+    if len(pre) > 0 and pre[-1]**2 == num:
+        pre.pop(-1)
+    for item in pre[::-1]:
+        result.append(int(num / item))
+    return result
