@@ -70,3 +70,13 @@ def combinatorialNumber(m, n):
     for i in xrange(1, m - n + 1):
         result /= i
     return result
+
+
+def isLeapYear(year):
+    if year % 400 == 0:
+        return True
+    elif year % 100 == 0:
+        return False
+    elif year % 4 == 0:
+        return True
+    return False
