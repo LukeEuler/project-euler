@@ -4,7 +4,7 @@
 # https://projecteuler.net/problem=23
 
 from app import Problem
-from utils import getProperDivisors
+from utils import get_proper_divisors
 
 
 class Problem23(Problem):
@@ -17,9 +17,9 @@ class Problem23(Problem):
     def solve(self):
         abundants = []
         for value in xrange(1, self.max + 1):
-            if sum(getProperDivisors(value)) > value:
+            if sum(get_proper_divisors(value)) > value:
                 abundants.append(value)
-        nonAbundants = set()
+        non_abundants = set()
         for index, itemLeft in enumerate(abundants):
             if itemLeft >= self.max / 2:
                 break
@@ -28,9 +28,9 @@ class Problem23(Problem):
                 if value > self.max:
                     break
                 else:
-                    nonAbundants.add(value)
-        allSum = int(self.max * (self.max + 1) / 2)
-        return allSum - sum(nonAbundants)
+                    non_abundants.add(value)
+        all_sum = int(self.max * (self.max + 1) / 2)
+        return all_sum - sum(non_abundants)
 
 
 Problem23().run()

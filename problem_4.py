@@ -4,7 +4,7 @@
 # https://projecteuler.net/problem=4
 
 from app import Problem
-from utils import isPalindrome
+from utils import is_palindrome
 
 
 class Problem4(Problem):
@@ -21,7 +21,7 @@ class Problem4(Problem):
         for a in xrange(maxNum - 1, minNum, -1):
             for b in xrange(a, minNum, -1):
                 num = a * b
-                if isPalindrome(num):
+                if is_palindrome(num):
                     minNum = b
                     result = max(result, num)
                     break

@@ -27,26 +27,26 @@ class Prime:
         return self
 
     def next(self):
-        nextNum = self.primes[-1] + self.primes[-1] % 2 + 1
+        next_num = self.primes[-1] + self.primes[-1] % 2 + 1
         while True:
-            sup = int(nextNum**.5)
+            sup = int(next_num**.5)
             for prime in self.primes:
                 if prime > sup:
-                    self.primes.append(nextNum)
+                    self.primes.append(next_num)
                     return self.primes[-2]
-                elif nextNum % prime == 0:
+                elif next_num % prime == 0:
                     break
             else:
-                self.primes.append(nextNum)
+                self.primes.append(next_num)
                 return self.primes[-2]
-            nextNum += 2
+            next_num += 2
 
 
-def isPalindrome(num):
-    strNum = str(num)
-    k = int(len(strNum) / 2)
+def is_palindrome(num):
+    str_num = str(num)
+    k = int(len(str_num) / 2)
     for i in xrange(k):
-        if strNum[i] != strNum[- i - 1]:
+        if str_num[i] != str_num[- i - 1]:
             return False
     return True
 
@@ -68,7 +68,7 @@ def factorial(n):
     return result
 
 
-def combinatorialNumber(m, n):
+def combinatorial_number(m, n):
     if n > m:
         return 0
     result = 1
@@ -79,7 +79,7 @@ def combinatorialNumber(m, n):
     return result
 
 
-def isLeapYear(year):
+def is_leap_year(year):
     if year % 400 == 0:
         return True
     elif year % 100 == 0:
@@ -89,7 +89,7 @@ def isLeapYear(year):
     return False
 
 
-def getProperDivisors(num):
+def get_proper_divisors(num):
     result = [1]
     pre = []
     sup = int(num**.5) + 1

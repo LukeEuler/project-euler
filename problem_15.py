@@ -4,7 +4,7 @@
 # https://projecteuler.net/problem=15
 
 from app import Problem
-from utils import combinatorialNumber
+from utils import combinatorial_number
 
 
 class Problem15(Problem):
@@ -15,7 +15,7 @@ class Problem15(Problem):
         self.num = 20
 
     def solve(self):
-        return combinatorialNumber(2 * self.num, self.num)
+        return combinatorial_number(2 * self.num, self.num)
 
 
 Problem15().run()

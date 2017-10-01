@@ -4,7 +4,7 @@
 # https://projecteuler.net/problem=19
 
 from app import Problem
-from utils import isLeapYear
+from utils import is_leap_year
 
 
 class Problem19(Problem):
@@ -22,7 +22,7 @@ class Problem19(Problem):
         sum = 0
         mod = self.firstMod
         for year in xrange(self.first, self.end + 1):
-            if isLeapYear(year):
+            if is_leap_year(year):
                 self.month[1] = 29
             for m in self.month:
                 mod = (mod + m) % 7
